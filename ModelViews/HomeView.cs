@@ -7,11 +7,12 @@ namespace api_desafio21dias.ModelViews
     {
         public string Informacao => "Bem vindo ao sistema";
         public List<dynamic> Endpoints => new List<dynamic>(){
+            new { Documentacao = "/swagger" },
             new {
-                Item = new { Documentacao = "/swagger" }
-            },
-            new {
-                Item = new { Path = "/alunos" }
+                Itens = new List<dynamic>() {
+                    new { Path = "/alunos" },
+                    new { Path = "/fornecedores" }
+                } 
             }
         };
     }

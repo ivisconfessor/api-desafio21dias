@@ -34,7 +34,11 @@ namespace api_desafio21dias
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "api_desafio21dias", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { 
+                    Title = "Web API - Desafio C# 21 Dias by Torne-se Um Programador", 
+                    Version = "v2", 
+                    Description = "Primeira Web API feita no Treinamento de APIs com C# - Desafio 21 Dias by Torne-se Um Programador" 
+                });
             });
         }
 
@@ -47,7 +51,7 @@ namespace api_desafio21dias
             }
         
             app.UseSwagger();
-            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "api_desafio21dias v1"));
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Desafio C# 21 Dias by Torne-se Um Programador"));
         
             app.UseHttpsRedirection();
 
